@@ -61,6 +61,11 @@ This app uses the OpenWeatherMap API. The API key is already included in the cod
 ```javascript
 const API_KEY = "your-api-key-here";
 ```
+## Page Overview
+-- It is a weather app that provides real-time weather information for any city worldwide. The app features a search functionality where users can enter a city name to retrieve current weather details such as temperature, weather condition, humidity, and wind speed. The interface is designed to be clean and modern, with responsive design for both desktop and mobile devices. The app also includes error handling for invalid city names and displays user-friendly messages when no data is found.
+
+![alt text](image/Frontpage.png)
+
 
 ## 🚀 Usage
 

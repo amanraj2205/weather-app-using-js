@@ -2,7 +2,7 @@ const cityInput = document.querySelector('.city-input');
 const errorMessage = document.getElementById('error-message');
 const weatherDisplay = document.getElementById('weather-display');
 
-const API_KEY = "ENTER YOUR API KEY";
+const API_KEY = "b0f3d5450d3f3a364bd62cf12115b6ce";
 
 // Map OpenWeather icons to higher quality Weatherbit icons for premium UI
 const iconMap = {
