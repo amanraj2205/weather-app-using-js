@@ -3,113 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather App</title>
+    <title>Weather Dashboard</title>
+    <!-- Modern Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" rel="stylesheet" />
     <link rel="stylesheet" href="style.css">
-
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
-
-    <link
-    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
-    rel="stylesheet"
-/>
-
-
 </head>
 <body>
-
-
+    <div class="app-background"></div>
+    
     <main class="main-container">
-        
-        <header class="input-container">
-            <input type="text" class="city-input" placeholder="Search for a city">
-            <button class="search-btn">
-                <span class="material-symbols-outlined">
-                    search
-                    </span>
-            </button>
-         </header>
-         <div class="errorshow">
-            <h1></h1>
-        </div>
-<section class="wether-info">
-    <div class="loaction-data-container">
-        <div class="loaction">
-            <i class="ri-map-pin-line"></i>
-            <h4 class="cityName">Jaipur</h4>
-        </div>
-        <div class="date">
-            <i class="ri-calendar-line"></i>
-            <h5 class="current-date-txt regular-txt">Monday 12th July 2021</h5>
-    </div>
+        <header class="search-section">
+            <div class="input-wrapper">
+                <i class="ri-search-line search-icon"></i>
+                <input type="text" class="city-input" placeholder="Search for a city..." autocomplete="off">
+            </div>
+        </header>
 
-    </div>
-    <div class="weather-summary-container">
-        <div class="weather-icon">
-            <img src="https://www.weatherbit.io/static/img/icons/c01d.
-             png" alt="weather-icon" class="weather-summary-img"> 
-
-            </div> 
-        <div class="weather-summary-info">
-            <h1 class="temp-txt">30°C</h1>
-            <h5 class="condition-txt regular-txt">Cloudy</h5>
+        <div class="errorshow" id="error-message">
+            <p></p>
         </div>
 
-    </div>
+        <section class="weather-info" id="weather-display">
+            <div class="location-data-container">
+                <div class="location">
+                    <i class="ri-map-pin-2-fill"></i>
+                    <h2 class="cityName">Jaipur</h2>
+                </div>
+                <div class="date">
+                    <p class="current-date-txt regular-txt">Monday 12th July 2021</p>
+                </div>
+            </div>
 
-    <div class="weather-condition-container">
-<div class="condition-info">
-    <i class="ri-drop-line"></i>
-    <div class="condition-item">
-        <h5 class="regular-txt">Humidity</h5>
-        <h5 class="humidity-value-txt">50%</h5>
-    </div>
-</div>
-<div class="weather-condition-container">
-    <div class="condition-info">
-        <i class="ri-windy-fill"></i>
-        <div class="condition-item">
-            <h5 class="regular-txt">Wind Speed</h5>
-            <h5 class="wind-value-txt">10  M/S</h5>
-        </div>
-    </div>
-</div>
-</div>
+            <div class="weather-summary-container">
+                <div class="weather-icon">
+                    <img src="https://www.weatherbit.io/static/img/icons/c01d.png" alt="weather-icon" class="weather-summary-img" id="main-weather-icon">
+                </div> 
+                <div class="weather-summary-info">
+                    <h1 class="temp-txt">30<span class="celsius">°C</span></h1>
+                    <h3 class="condition-txt">Cloudy</h3>
+                </div>
+            </div>
 
+            <div class="weather-details-grid">
+                <div class="detail-card">
+                    <div class="detail-icon">
+                        <i class="ri-drop-fill"></i>
+                    </div>
+                    <div class="detail-info">
+                        <p class="detail-label">Humidity</p>
+                        <p class="humidity-value-txt detail-value">50%</p>
+                    </div>
+                </div>
+                <div class="detail-card">
+                    <div class="detail-icon">
+                        <i class="ri-windy-fill"></i>
+                    </div>
+                    <div class="detail-info">
+                        <p class="detail-label">Wind Speed</p>
+                        <p class="wind-value-txt detail-value">10 m/s</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-<!-- <div class="forecast-item-container">
-    <div class="forecast-item">
-        <h5 class="forecast-item-date regular-txt">
-     13 July 
-        </h5>
-        <img src="./image/rain.jpg" alt="weather-icon" class="forecast-item-img">
-        <h5 class="forecast-item-temp-txt">30°C</h5>
-    </div>
-    <div class="forecast-item">
-        <h5 class="forecast-item-date regular-txt">
-             14 July 
-        </h5>
-     <img src="./image/flat-cute-rain-cloud-illustration-symbol-with-unique-style-design-unusual-rainy-weather-forecast-template-vector.jpg" alt="weather-icon" class="forecast-item-img"> 
-        <h5 class="forecast-item-temp-txt">30°C</h5>
-    </div>
-    <div class="forecast-item">
-        <h5 class="forecast-item-date regular-txt">
-             15 July 
-        </h5>
-        <img src="./image/flat-cute-rain-cloud-illustration-symbol-with-unique-style-design-unusual-rainy-weather-forecast-template-vector.jpg" alt="weather-icon" class="forecast-item-img">
-        <h5 class="forecast-item-temp-txt">30°C</h5>
-    </div>
-    <div class="forecast-item">
-        <h5 class="forecast-item-date regular-txt">
-         16 July 
-        </h5>
-        <img src="./image/flat-cute-rain-cloud-illustration-symbol-with-unique-style-design-unusual-rainy-weather-forecast-template-vector.jpg" alt="weather-icon" class="forecast-item-img">
-        <h5 class="forecast-item-temp-txt">30°C</h5>
-    </div>
-</div> -->
-
-
-</section>
-</main>
     <script src="script.js"></script>
 </body>
 </html>
